@@ -5,6 +5,8 @@ public class Box extends JButton {
 	private int column;
 	private boolean isClicked;
 	private boolean isBomb;
+	private boolean isMarked;
+	private boolean isUncovered;
 	private boolean isTouching;
 	private int numberTouching;
 	
@@ -14,6 +16,8 @@ public class Box extends JButton {
 		this.column = column;
 		isClicked = false;
 		isBomb = false;
+		isMarked = false;
+		isUncovered = false;
 	}
 	
 	public Box() {
@@ -22,9 +26,29 @@ public class Box extends JButton {
 		isClicked = false;
 		isBomb = false;
 		isTouching = false;
+		isMarked = false;
+		isUncovered = false;
 		numberTouching = 0;
 	}
 	
+
+	
+	public boolean isMarked() {
+		return isMarked;
+	}
+
+	public void setMarked(boolean isMarked) {
+		this.isMarked = isMarked;
+	}
+
+	public boolean isUncovered() {
+		return isUncovered;
+	}
+
+	public void setUncovered(boolean isUncovered) {
+		this.isUncovered = isUncovered;
+	}
+
 	public int getRow() {
 		return row;
 	}
